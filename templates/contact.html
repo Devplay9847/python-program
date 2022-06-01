@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .container{
+            background-color: antiquewhite;
+        }
+        form{
+            background-color: cadetblue ;
+            border: 2px solid red;
+            border-radius: 5px;
+            padding: 5px 28px;
+        }
+        #map {
+        height: 400px;
+        width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CONTACT US</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ cform }} <br>
+                        <center><input type = "submit" value="Submit" class="btn btn-default btn-md"></center>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="700" height="250" id="gmap_canvas"
+                                    src="https://maps.google.com/maps?q=Chouhan%20Green%20Valley&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                            </iframe><a href="https://www.crocothemes.net"></a>
+                        </div>
+                        <style>
+                            .mapouter{text-align:right;height:250px;width:700px;}
+                            .gmap_canvas {overflow:hidden;background:none!important;height:250px;width:700px;}
+                        </style>
+                    </div>
+                    <div class="address-column">
+                        <h1><b>Chouhan Green Valley</b></h1>
+                        <h3>Junwani, Smriti Nagar, Bhilai 490020</h3>
+                        Contact No.:
+                        <br>7000761551 (Devendra)
+                        <br>7000255524 (Gaurav)
+                        <br>8839902380 (Surya)
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

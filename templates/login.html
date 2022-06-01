@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .container{
+            background-color: antiquewhite;
+        }
+        form{
+            background-color: cadetblue ;
+            border: 2px solid red;
+            border-radius: 5px;
+            padding: 5px 28px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LOGIN</h1>
+            <div class="row">
+                <div class="col-md-5">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ lform }} <br>
+                        <center><input type = "submit" value="Login" class="btn btn-default btn-md"></center>
+                        <center><a href="./signup" value="Haven't Registered Yet? Sign Up." class="btn btn-default btn-md"></center>
+                    </form>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
